@@ -1,0 +1,54 @@
+//Small Screens
+@media (max-width: 768px) {
+  aside {
+    display: none;
+  }
+  main {
+    display: block;
+    aside {
+      flex-basis: 50px;
+      position: static;
+      height: 50px;
+      flex-direction: row;
+      .up-slide {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    section {
+      overflow: scroll;
+    }
+
+    #nav-mobile {
+      display: block;
+      height: 45px;
+      width: 100vw;
+      transform: translateY(-80px);
+
+      .wrapper {
+        transform: translateX(-15px);
+        margin: auto 10%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .hide-on-small {
+    display: none;
+  }
+
+  .detail-flex {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) {
+  .show-on-small {
+    display: none;
+  }
+}

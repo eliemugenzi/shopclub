@@ -1,0 +1,210 @@
+@import "utilities";
+
+@import "menu";
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+
+  aside {
+    flex-basis: 10vw;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    z-index: 5;
+    flex-direction: column;
+    .down-side {
+      margin-top: 30vh;
+    }
+  }
+
+  section#showcase {
+    flex-basis: 100vw;
+    overflow: hidden;
+    background: lighten(@grey-color, 75%);
+
+    .intro {
+      width: 100%;
+      height: 100vh;
+      background: url(https://images.pexels.com/photos/292998/pexels-photo-292998.jpeg?auto=compress&cs=tinysrgb&h=350)
+        no-repeat center/cover;
+      display: grid;
+      place-content: center;
+
+      .intro-text {
+        a {
+          text-align: right;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  #collection {
+    width: 100%;
+    background: url(https://images.pexels.com/photos/432059/pexels-photo-432059.jpeg?auto=compress&cs=tinysrgb&h=350)
+      no-repeat center/cover;
+    .overlay {
+      padding: 20px;
+      position: relative;
+      top: 60%;
+      left: 30%;
+    }
+  }
+}
+
+#products {
+  //padding: 20px;
+  //width: 100%;
+  position: relative;
+  .header {
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto 15%;
+    grid-gap: 20px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .product {
+      position: relative;
+      transition: 0.5s ease-out;
+      overflow: hidden;
+      &:hover {
+        .product-caption {
+          z-index: 2;
+
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      img {
+        width: 100%;
+      }
+
+      .product-caption {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        transform: translate3d(0, 100%, 0);
+        z-index: -2;
+        padding: 40px;
+        transition: 0.5s ease-out;
+        color: #fff;
+      }
+    }
+  }
+}
+
+#search {
+  padding: 20px;
+  .search-form {
+    position: relative;
+
+    width: 80%;
+    form {
+      input[type="search"] {
+        position: relative;
+        width: 70%;
+        height: 45px;
+        border-radius: 5px;
+        transition: 0.5s ease-out;
+        border: 1px solid @dark-color;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+
+        &:focus {
+          border: 1px solid @grey-color;
+        }
+      }
+      input[type="submit"] {
+        display: inline-block;
+        margin-top: 20px;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid @dark-color;
+        font-family: "Poppins", sans-serif;
+        transition: 0.5s ease-out;
+        cursor: pointer;
+
+        &:hover {
+          background: @white-color;
+          color: @dark-color;
+        }
+      }
+    }
+  }
+}
+
+#details {
+  padding: 30px;
+  margin-left: 10%;
+  @media (max-width: 768px) {
+    margin: 0;
+    .detail-flex {
+      .product-img {
+        img {
+          position: relative;
+          height: 400px;
+          width: 70%;
+        }
+      }
+    }
+  }
+  .header {
+    margin-bottom: 30px;
+    .back {
+      margin-left: 10%;
+    }
+  }
+  .detail-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      position: relative;
+      width: 80%;
+      margin: 0;
+    }
+    .product-detail {
+      .product-title {
+        font-size: 28px;
+      }
+      .product-info {
+        display: block;
+        margin-bottom: 20px;
+
+        .product-subtitle {
+          font-size: 20px;
+          text-transform: uppercase;
+        }
+      }
+
+      .btn {
+        border: 1px solid @dark-color;
+        &:hover {
+          background: @white-color;
+          color: @dark-color;
+        }
+      }
+    }
+  }
+}
+
+@import "mobile";

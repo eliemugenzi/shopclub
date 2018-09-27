@@ -1,0 +1,91 @@
+@grey-color: #333;
+@dark-color: #000;
+@white-color: #fff;
+
+.container {
+  margin: auto 10%;
+  padding: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  color: @white-color;
+  background: @dark-color;
+}
+
+.text-light {
+  color: @white-color;
+  &.link {
+    &:hover {
+      color: @grey-color;
+      transition: 0.5 ease-out;
+    }
+  }
+}
+.text-dark {
+  color: @dark-color;
+  &.link {
+    &:hover {
+      color: @grey-color;
+    }
+  }
+}
+.bg-dark {
+  background: @dark-color;
+}
+.bg-light {
+  background: @white-color;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.light-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.align-right {
+  text-align: right;
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align-center {
+  margin: auto 50%;
+}
+
+.m-top {
+  margin-top: 20px;
+  display: block;
+}
+
+.underline {
+  display: inline-block;
+  width: 100px;
+  height: 5px;
+  background: @dark-color;
+}
+
+.profuct-info {
+  margin: auto 10%;
+}
+
+.logo {
+  img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 40%;
+  }
+}
