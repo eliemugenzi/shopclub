@@ -30,11 +30,18 @@
 
   .nav-header {
     text-align: center;
-    padding: 10px;
+    //padding: 5px;
     border-bottom: 1px solid @white-color;
     h4 {
       font-size: 40px;
       text-transform: uppercase;
+      @media (max-width: 768px) {
+        font-size: 30px;
+      }
+    }
+
+    .close {
+      padding-bottom: 10px;
     }
   }
 
@@ -50,6 +57,10 @@
           text-transform: uppercase;
           transition: 0.5s ease-out;
           font-size: 30px;
+
+          @media (max-width: 768px) {
+            font-size: 25px;
+          }
           &:hover {
             color: @grey-color;
           }
