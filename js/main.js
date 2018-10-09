@@ -5,5 +5,4 @@ $(document).ready(() => {
   $(".close").on("click", () => {
     $("#side-menu").removeClass("active");
   });
-
 });

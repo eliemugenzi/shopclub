@@ -58,14 +58,29 @@
   height: 5px;
   background: #000;
 }
+.underline.light {
+  background: #fff;
+}
 .profuct-info {
   margin: auto 10%;
 }
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   position: relative;
-  left: 40%;
+  left: 15%;
+}
+.auth-side {
+  display: block;
+}
+.auth-side a {
+  display: inline-block;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+.m-bottom {
+  margin-bottom: 30px;
 }
 .toggle {
   margin: auto 10%;
@@ -97,7 +112,6 @@
 }
 #side-menu .nav-header {
   text-align: center;
-  border-bottom: 1px solid #fff;
 }
 #side-menu .nav-header h4 {
   font-size: 40px;
@@ -197,6 +211,7 @@ main {
 }
 main aside {
   flex-basis: 10vw;
+  max-width: 10vw;
   padding: 20px;
   position: fixed;
   height: 100vh;
@@ -281,6 +296,9 @@ main #collection .overlay {
 }
 #search {
   padding: 20px;
+}
+#search .back {
+  margin: auto 10%;
 }
 #search .search-form {
   position: relative;
@@ -368,11 +386,22 @@ main #collection .overlay {
   aside {
     display: none;
   }
+  .show-on-small .auth-side {
+    display: flex;
+    transform: translateY(35px);
+  }
+  .show-on-small .auth-side a {
+    margin-right: 30px;
+  }
+  .show-on-small .auth-side a i.fa {
+    font-size: 25px;
+  }
   main {
     display: block;
   }
   main aside {
     flex-basis: 50px;
+    max-height: 50px;
     position: static;
     height: 50px;
     flex-direction: row;

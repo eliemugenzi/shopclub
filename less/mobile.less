@@ -3,10 +3,25 @@
   aside {
     display: none;
   }
+  .show-on-small {
+    .auth-side {
+      display: flex;
+      transform: translateY(35px);
+
+      a {
+        margin-right: 30px;
+        i.fa {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
   main {
     display: block;
     aside {
       flex-basis: 50px;
+      max-height: 50px;
       position: static;
       height: 50px;
       flex-direction: row;
