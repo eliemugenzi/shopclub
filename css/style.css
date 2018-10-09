@@ -219,6 +219,9 @@ main aside {
   z-index: 5;
   flex-direction: column;
 }
+main aside .auth-side {
+  margin-top: 20px;
+}
 main aside .down-side {
   margin-top: 30vh;
 }
@@ -229,8 +232,8 @@ main section#showcase {
 }
 main section#showcase .intro {
   width: 100%;
-  height: 100vh;
-  background: url(https://images.pexels.com/photos/292998/pexels-photo-292998.jpeg?auto=compress&cs=tinysrgb&h=350) no-repeat center / cover;
+  height: 80vh;
+  background: url(https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&h=350) no-repeat center / cover;
   display: grid;
   place-content: center;
 }
@@ -285,7 +288,7 @@ main #collection .overlay {
 }
 #products .products-grid .product .product-caption {
   position: absolute;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.85);
   width: 100%;
   height: 100%;
   transform: translate3d(0, 100%, 0);
@@ -293,6 +296,10 @@ main #collection .overlay {
   padding: 40px;
   transition: 0.5s ease-out;
   color: #fff;
+}
+#products .products-grid .product .product-caption strong {
+  text-transform: uppercase;
+  font-weight: 100;
 }
 #search {
   padding: 20px;
@@ -381,6 +388,95 @@ main #collection .overlay {
 #details .detail-flex .product-detail .btn:hover {
   background: #fff;
   color: #000;
+}
+#login {
+  margin: auto 10%;
+}
+#login .header h2 {
+  text-transform: uppercase;
+}
+#login .form-wrapper {
+  position: relative;
+  left: 25%;
+  max-width: 400px;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  #login .form-wrapper {
+    left: 0;
+  }
+}
+#login .form-wrapper form {
+  position: relative;
+}
+#login .form-wrapper form .field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#login .form-wrapper form .field input[type="text"],
+#login .form-wrapper form .field input[type="password"] {
+  position: relative;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+}
+#login .form-wrapper form .field input[type="submit"] {
+  padding: 1rem 2rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+#register {
+  margin: auto 10%;
+}
+#register .header h2 {
+  text-transform: uppercase;
+}
+#register .form-wrapper {
+  position: relative;
+  left: 25%;
+  max-width: 400px;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  #register .form-wrapper {
+    left: 0%;
+  }
+}
+#register .form-wrapper form {
+  position: relative;
+}
+#register .form-wrapper form .field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#register .form-wrapper form .field input[type="text"],
+#register .form-wrapper form .field input[type="password"],
+#register .form-wrapper form .field input[type="email"] {
+  position: relative;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+}
+#register .form-wrapper form .field input[type="submit"] {
+  padding: 1rem 2rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 768px) {
   aside {

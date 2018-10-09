@@ -1,5 +1,5 @@
 @import "utilities";
-
+@import "slider";
 @import "menu";
 
 body {
@@ -20,6 +20,9 @@ main {
     display: flex;
     z-index: 5;
     flex-direction: column;
+    .auth-side {
+      margin-top: 20px;
+    }
     .down-side {
       margin-top: 30vh;
     }
@@ -32,8 +35,8 @@ main {
 
     .intro {
       width: 100%;
-      height: 100vh;
-      background: url(https://images.pexels.com/photos/292998/pexels-photo-292998.jpeg?auto=compress&cs=tinysrgb&h=350)
+      height: 80vh;
+      background: url(https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&h=350)
         no-repeat center/cover;
       display: grid;
       place-content: center;
@@ -105,7 +108,7 @@ main {
 
       .product-caption {
         position: absolute;
-        background: rgba(0, 0, 0, 0.75);
+        background: rgba(0, 0, 0, 0.85);
         width: 100%;
         height: 100%;
         transform: translate3d(0, 100%, 0);
@@ -113,6 +116,11 @@ main {
         padding: 40px;
         transition: 0.5s ease-out;
         color: #fff;
+
+        strong {
+          text-transform: uppercase;
+          font-weight: 100;
+        }
       }
     }
   }
@@ -219,4 +227,98 @@ main {
   }
 }
 
+#login {
+  margin: auto 10%;
+  .header {
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+
+  .form-wrapper {
+    position: relative;
+    left: 25%;
+    @media(max-width:768px){
+      left:0;
+    }
+    max-width: 400px;
+    padding: 20px;
+
+    form {
+      position: relative;
+      .field {
+        position: relative;
+        width: 100%;
+        margin-bottom: 15px;
+        input[type="text"],
+        input[type="password"] {
+          position: relative;
+          height: 35px;
+          width: 100%;
+          border-radius: 5px;
+          border: 1px solid @grey-color;
+          outline: none;
+          font-family: "Poppins", sans-serif;
+          padding: 5px;
+        }
+        input[type="submit"] {
+          padding: 1rem 2rem;
+          background: @dark-color;
+          color: @white-color;
+          border: none;
+          outline: none;
+          font-family: "Poppins", sans-serif;
+        }
+      }
+    }
+  }
+}
+
+#register {
+  margin: auto 10%;
+  .header {
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+
+  .form-wrapper {
+    position: relative;
+    left: 25%;
+    @media (max-width: 768px) {
+      left: 0%;
+    }
+    max-width: 400px;
+    padding: 20px;
+
+    form {
+      position: relative;
+      .field {
+        position: relative;
+        width: 100%;
+        margin-bottom: 15px;
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+          position: relative;
+          height: 35px;
+          width: 100%;
+          border-radius: 5px;
+          border: 1px solid @grey-color;
+          outline: none;
+          font-family: "Poppins", sans-serif;
+          padding: 5px;
+        }
+        input[type="submit"] {
+          padding: 1rem 2rem;
+          background: @dark-color;
+          color: @white-color;
+          border: none;
+          outline: none;
+          font-family: "Poppins", sans-serif;
+        }
+      }
+    }
+  }
+}
 @import "mobile";
