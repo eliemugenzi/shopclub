@@ -82,6 +82,48 @@
 .m-bottom {
   margin-bottom: 30px;
 }
+.search-box {
+  background: #2f3640;
+  height: 40px;
+  padding: 10px;
+  border-radius: 40px;
+}
+.search-btn {
+  float: right;
+  width: 40px;
+  height: 40px;
+  color: #e84118;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  color: #fff;
+  padding: 0;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0;
+}
+.search-box:hover > .search-txt,
+.search-txt:focus {
+  padding: 0 6px;
+  width: 240px;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s ease-out;
+}
+.search-box:hover > .search-btn {
+  background: #fff;
+}
+.search-txt:focus {
+  width: 100%;
+}
 .toggle {
   margin: auto 10%;
 }
@@ -237,6 +279,18 @@ main section#showcase .intro {
   display: grid;
   place-content: center;
 }
+@media (max-width: 768px) {
+  main section#showcase .intro {
+    display: block;
+    margin: 0;
+  }
+  main section#showcase .intro .intro-text {
+    margin: 0;
+    width: 90%;
+    position: relative;
+    top: 30%;
+  }
+}
 main section#showcase .intro .intro-text a {
   text-align: right;
   margin-top: 20px;
@@ -293,13 +347,37 @@ main #collection .overlay {
   height: 100%;
   transform: translate3d(0, 100%, 0);
   z-index: -2;
-  padding: 40px;
   transition: 0.5s ease-out;
   color: #fff;
 }
+#products .products-grid .product .product-caption .product-info {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  margin: 0;
+}
+#products .products-grid .product .product-caption a {
+  padding: 0.5rem 3rem;
+  margin-top: 10px;
+  background: #fff;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  left: 15%;
+  transition: 0.5s ease-out;
+}
+#products .products-grid .product .product-caption a:hover {
+  color: #fff;
+  background: #000;
+  transition: 0.5s ease-out;
+}
 #products .products-grid .product .product-caption strong {
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 500;
+  margin-left: 10%;
+}
+#products .products-grid .product .product-caption span {
+  font-weight: 600;
 }
 #search {
   padding: 20px;
@@ -340,7 +418,9 @@ main #collection .overlay {
 }
 #details {
   padding: 30px;
-  margin-left: 10%;
+  position: relative;
+  left: 15%;
+  margin-right: 20%;
 }
 @media (max-width: 768px) {
   #details {
@@ -356,7 +436,7 @@ main #collection .overlay {
   margin-bottom: 30px;
 }
 #details .header .back {
-  margin-left: 10%;
+  margin-left: 0%;
 }
 #details .detail-flex {
   display: grid;

@@ -40,6 +40,16 @@ main {
         no-repeat center/cover;
       display: grid;
       place-content: center;
+      @media (max-width: 768px) {
+        display: block;
+        margin: 0;
+        .intro-text {
+          margin: 0;
+          width: 90%;
+          position: relative;
+          top: 30%;
+        }
+      }
 
       .intro-text {
         a {
@@ -113,13 +123,40 @@ main {
         height: 100%;
         transform: translate3d(0, 100%, 0);
         z-index: -2;
-        padding: 40px;
         transition: 0.5s ease-out;
         color: #fff;
 
+        .product-info {
+          background: #fff;
+          color: #000;
+          padding: 20px;
+          margin: 0;
+        }
+        a {
+          padding: 0.5rem 3rem;
+          margin-top: 10px;
+          background: @white-color;
+          color: @dark-color;
+          display: inline-block;
+          position: relative;
+          left: 15%;
+
+          transition: 0.5s ease-out;
+
+          &:hover {
+            color: @white-color;
+            background: @dark-color;
+            transition: 0.5s ease-out;
+          }
+        }
+
         strong {
           text-transform: uppercase;
-          font-weight: 100;
+          font-weight: 500;
+          margin-left: 10%;
+        }
+        span {
+          font-weight: 600;
         }
       }
     }
@@ -172,7 +209,9 @@ main {
 
 #details {
   padding: 30px;
-  margin-left: 10%;
+  position: relative;
+  left: 15%;
+  margin-right: 20%;
   @media (max-width: 768px) {
     margin: 0;
     .detail-flex {
@@ -188,7 +227,7 @@ main {
   .header {
     margin-bottom: 30px;
     .back {
-      margin-left: 10%;
+      margin-left: 0%;
     }
   }
   .detail-flex {
@@ -238,8 +277,8 @@ main {
   .form-wrapper {
     position: relative;
     left: 25%;
-    @media(max-width:768px){
-      left:0;
+    @media (max-width: 768px) {
+      left: 0;
     }
     max-width: 400px;
     padding: 20px;
